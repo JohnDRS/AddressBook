@@ -1,4 +1,4 @@
-package JavaFXPhoneBookProject.Controllers;
+package JavaFXAddressBookProject.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.scene.Node;

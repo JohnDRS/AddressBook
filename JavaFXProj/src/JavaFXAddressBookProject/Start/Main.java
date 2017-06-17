@@ -1,6 +1,6 @@
-package JavaFXPhoneBookProject.Start;
+package JavaFXAddressBookProject.Start;
 
-import JavaFXPhoneBookProject.Controllers.MainController;
+import JavaFXAddressBookProject.Controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

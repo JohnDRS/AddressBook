@@ -1,4 +1,4 @@
-package JavaFXPhoneBookProject.Objects;
+package JavaFXAddressBookProject.Objects;
 import javafx.beans.property.SimpleStringProperty;
 
 

@@ -1,6 +1,6 @@
-package JavaFXPhoneBookProject.interfaces;
+package JavaFXAddressBookProject.interfaces;
 
-import JavaFXPhoneBookProject.Objects.Person;
+import JavaFXAddressBookProject.Objects.Person;
 
 /**
  * Created by John on 09.06.2017.

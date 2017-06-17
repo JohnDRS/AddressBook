@@ -1,11 +1,9 @@
-package JavaFXPhoneBookProject.interfaces.impls;
+package JavaFXAddressBookProject.interfaces.impls;
 
-import JavaFXPhoneBookProject.Objects.Person;
-import JavaFXPhoneBookProject.interfaces.AddressBook;
+import JavaFXAddressBookProject.Objects.Person;
+import JavaFXAddressBookProject.interfaces.AddressBook;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
-import java.util.ArrayList;
 
 /**
  * Created by John on 09.06.2017.

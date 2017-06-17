@@ -1,14 +1,13 @@
-package JavaFXPhoneBookProject.Controllers;
+package JavaFXAddressBookProject.Controllers;
 
 
-import JavaFXPhoneBookProject.Objects.Person;
-import JavaFXPhoneBookProject.interfaces.impls.CollectionAddressBook;
+import JavaFXAddressBookProject.Objects.Person;
+import JavaFXAddressBookProject.interfaces.impls.CollectionAddressBook;
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -16,11 +15,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 
 
 import java.io.IOException;
-import java.sql.*;
 
 public class MainController {
 

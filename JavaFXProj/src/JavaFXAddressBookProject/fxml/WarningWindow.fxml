@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="130.0" minWidth="350.0" prefHeight="130.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFXPhoneBookProject.Controllers.WarningWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="130.0" minWidth="350.0" prefHeight="130.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFXAddressBookProject.Controllers.WarningWindowController">
    <bottom>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
