@@ -54,20 +54,12 @@ public class MainController {
         clmnPhone.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
         clmnMail.setCellValueFactory(new PropertyValueFactory<>("eMail"));
 
-        addressBook.getPersonList().addListener(new ListChangeListener<Person>() {
-            @Override
-            public void onChanged(Change<? extends Person> c) {
-                countUpdate();
-            }
-        });
+        addressBook.getPersonList().addListener((ListChangeListener<Person>) c -> countUpdate());
 
-        tblPhoneBook.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                if(event.getClickCount() == 2){
-                    editDialogController.setPerson((Person) tblPhoneBook.getSelectionModel().getSelectedItem());
-                    showDialog("Изменение данных");
-                }
+        tblPhoneBook.setOnMouseClicked(event -> {
+            if(event.getClickCount() == 2){
+                editDialogController.setPerson((Person) tblPhoneBook.getSelectionModel().getSelectedItem());
+                showDialog("Изменение данных");
             }
         });
 
