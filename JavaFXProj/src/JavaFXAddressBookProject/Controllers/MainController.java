@@ -5,14 +5,12 @@ import JavaFXAddressBookProject.Objects.Person;
 import JavaFXAddressBookProject.interfaces.impls.CollectionAddressBook;
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -38,12 +36,12 @@ public class MainController {
     public TableColumn<Person, String> clmnPhone;
     public TableColumn<Person, String> clmnMail;
     public TableView<Person> tblPhoneBook;
-    public FXMLLoader fxmlLoader = new FXMLLoader();
-    public FXMLLoader fxmlWWLoader = new FXMLLoader();
-    public Parent fxmlEdit;
+    private FXMLLoader fxmlLoader = new FXMLLoader();
+    private FXMLLoader fxmlWWLoader = new FXMLLoader();
+    private Parent fxmlEdit;
     private Parent fxmlWarningWindow;
 
-    public Stage editDialogStage;
+    private Stage editDialogStage;
     private Stage warningDialogStage;
     private Stage mainStage;
 
@@ -89,7 +87,7 @@ public class MainController {
     public void setMainStage(Stage mainStage){
         this.mainStage = mainStage;
     }
-    public void countUpdate(){
+    private void countUpdate(){
         lblCount.setText("Количество записей: " + addressBook.getPersonList().size());
     }
 
@@ -114,7 +112,7 @@ public class MainController {
 
             case "btnEdit":
                 if(selectedPerson == null){
-                    showWarningWindow("Выберите контакт");
+                    showWarningWindow();
                     break;
                 }
                 editDialogController.setPerson(selectedPerson);
@@ -123,7 +121,7 @@ public class MainController {
 
             case "btnDelete":
                 if(selectedPerson == null){
-                    showWarningWindow("Выберите контакт");
+                    showWarningWindow();
                     break;
                 }
                 addressBook.delete(selectedPerson);
@@ -145,7 +143,7 @@ public class MainController {
         editDialogStage.showAndWait();
     }
 
-    private void showWarningWindow(String text){
+    private void showWarningWindow(){
         if(warningDialogStage == null) {
             warningDialogStage = new Stage();
             warningDialogStage.setResizable(false);
@@ -154,7 +152,7 @@ public class MainController {
             warningDialogStage.initOwner(mainStage);
             warningDialogStage.setTitle("Ошибка");
         }
-        warningWindowController.setLblWarningWindow(text);
+        warningWindowController.setLblWarningWindow("Выберите контакт");
         warningDialogStage.show();
     }
 
